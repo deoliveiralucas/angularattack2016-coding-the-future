@@ -504,7 +504,7 @@ body{
     min-height: 100px;
     background-color: #ececec;
 }
-<<<<<<< HEAD
+
 
 @media screen and (max-width: 850px){
         width: 95%;
@@ -516,9 +516,9 @@ body{
         width: 80%;
     }
 }
-=======
+
 .content {
     position: relative;
     top: 60px;
 }
->>>>>>> accbff77710f383b4f2f203e909c08a14a47afbe
+
