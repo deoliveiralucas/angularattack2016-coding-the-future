@@ -1,7 +1,7 @@
 /**
  * Created by deoliveiralucas on 14/05/2016
  */
-export let MOODIES = [
+export let MOODS = [
     {
         mood: 'awful',
         moodValue: 1,
