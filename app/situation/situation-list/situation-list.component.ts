@@ -3,11 +3,13 @@ import {Router} from '@angular/router-deprecated';
 import {SituationService} from "../../situation/situation.service";
 import {Situation} from "../situation.model";
 import {MoodService} from "../../mood/mood.service";
+import {EntriesService} from "../../entries/entries.service";
+import {Entries} from "../../entries/entries.model";
 
 @Component({
     selector: 'my-situation-list',
     templateUrl: 'app/situation/situation-list/situation-list.component.html',
-    providers: [SituationService, MoodService]
+    providers: [SituationService, MoodService, EntriesService]
 })
 export class SituationListComponent implements OnInit {
     public list: Array<Situation> = [];
@@ -16,6 +18,7 @@ export class SituationListComponent implements OnInit {
     constructor(
         private _service: SituationService,
         private _moodService: MoodService,
+        private _entriesService: EntriesService,
         private _router: Router
     ){}
 
@@ -58,15 +61,25 @@ export class SituationListComponent implements OnInit {
 
     onclickNext() {
         var moodSelected = this._moodService.getStorage();
+        var entriesList: any = this._entriesService.getStorage();
+        var id: number = 1;
+
+        if (entriesList) {
+            id = entriesList.length + 1;
+        } else {
+            entriesList = [];
+        }
+
         var object: any = {
-            id: null,
+            id: id,
             mood: moodSelected.mood,
             moodValue: moodSelected.moodValue,
             events: this.listSelected,
             time: new Date()
         };
 
-        this._service.setStorageSelected(object);
+        entriesList.push(object);
+        this._entriesService.setStorage(entriesList);
         this.onclickGoToEntries();
     }
 

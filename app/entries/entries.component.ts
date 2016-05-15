@@ -18,8 +18,13 @@ export class EntriesComponent implements OnInit {
     ){}
 
     ngOnInit() {
-        // this.entriesList = this._service.getStorage();
-        this.entriesList = ENTRIES;
+        this.entriesList = this._service.getStorage();
+        var x: number, lenX: number;
+        for (x = 0, lenX = this.entriesList.length; x < lenX; x++) {
+            if (this.entriesList[x].time) {
+                this.entriesList[x].time = new Date(this.entriesList[x].time);
+            }
+        }
     }
 
     onclickDelete(item: Entries) {
