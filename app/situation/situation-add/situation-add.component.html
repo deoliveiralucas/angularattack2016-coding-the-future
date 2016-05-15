@@ -1,7 +1,11 @@
-<p>Add an activity</p>
-
-<form #formSituation="ngForm" (ngSubmit)="onSubmit()">
-    <input type="text" id="situation_description" placeholder="" [(ngModel)]="situation.description" ngControl="description" #description="ngForm" autofocus>
-
-    <button type="submit">Add</button>
-</form>
+<div class="center">
+    <p>Add an activity</p>
+</div>
+<div class="wrapper-input">
+    <form #formSituation="ngForm" (ngSubmit)="onSubmit()">
+        <input type="text" id="situation_description" placeholder="" [(ngModel)]="situation.description" ngControl="description" #description="ngForm" autofocus>
+    <div class="btn-wrapper">
+        <button class="center" type="submit">Add</button>
+    </div>
+    </form>
+</div>

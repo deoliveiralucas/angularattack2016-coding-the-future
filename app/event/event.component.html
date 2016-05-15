@@ -1,8 +1,10 @@
-Main causes of each mood
+<div class="center">
+    <p>Main causes of each mood</p>
+</div>
 <div>
     <ul>
         <li *ngFor="let event of mainEvents">
-            {{ event.mood }}: 
+            {{ event.mood }}:
             <ul>
                 <li *ngFor="let mainEvent of event.events">- {{ mainEvent }}</li>
             </ul>

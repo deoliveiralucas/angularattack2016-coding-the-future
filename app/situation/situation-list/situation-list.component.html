@@ -1,8 +1,13 @@
-<p>Choose an activity</p>
-
+<div class="center">
+    <p>Choose an activity</p>
+</div>
 <div *ngFor="let item of list">
     <div (click)="onclickSelectSituation(item)">{{item.description}}</div>
 </div>
 
-<button type="button" (click)="onclickNext()">Ok</button>
-<button type="button" (click)="onclickNew()">New Activity</button>
+<div class="btn-wrapper">
+    <button class="center" type="button" (click)="onclickNext()">Ok</button>
+</div>
+<div class="btn-wrapper">
+    <button class="center" type="button" (click)="onclickNew()">New Activity</button>
+</div>

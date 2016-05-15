@@ -1,4 +1,6 @@
-<p>Entries</p>
+<div class="center">
+    <p>Entries</p>
+</div>
 
 <div *ngFor="#item of entriesList">
     <div>
@@ -9,5 +11,9 @@
     </div>
 </div>
 
-<button type="button" (click)="onclickGoToCharts()">View Charts</button>
-<button type="button" (click)="onclickNew()">New Mood</button>
+<div class="btn-wrapper">
+    <button class="center" type="button" (click)="onclickGoToCharts()">View Charts</button>
+</div>
+<div class="btn-wrapper">
+    <button class="center" type="button" (click)="onclickNew()">New Mood</button>
+</div>
