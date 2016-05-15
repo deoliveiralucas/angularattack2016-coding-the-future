@@ -9,17 +9,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_deprecated_1 = require('@angular/router-deprecated');
+var situation_service_1 = require('../../situation/situation.service');
+var situation_model_1 = require('../../situation/situation.model');
 var SituationAddComponent = (function () {
-    function SituationAddComponent() {
+    function SituationAddComponent(_service, _router) {
+        this._service = _service;
+        this._router = _router;
+        this.situation = new situation_model_1.Situation();
     }
     SituationAddComponent.prototype.ngOnInit = function () {
+    };
+    SituationAddComponent.prototype.onSubmit = function () {
+        var itens = this._service.getStorage();
+        if (itens) {
+            itens.push(this.situation);
+        }
+        else {
+            itens = [this.situation];
+        }
+        this._service.setStorage(itens);
+        this.onclickGoToEntries();
+    };
+    SituationAddComponent.prototype.onclickGoToEntries = function () {
+        this._router.navigate(['Entries']);
     };
     SituationAddComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            templateUrl: 'app/situation/situation-add/situation-add.component.html'
+            templateUrl: '../app/situation/situation-add/situation-add.component.html',
+            providers: [situation_service_1.SituationService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [situation_service_1.SituationService, router_deprecated_1.Router])
     ], SituationAddComponent);
     return SituationAddComponent;
 }());
