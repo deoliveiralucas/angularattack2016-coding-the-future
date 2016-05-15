@@ -1,11 +1,10 @@
 <h1>Mapping mood</h1>
 
-<p><a href="">1. Name</a></p>
-<p><a href="">2. Choose a mood</a></p>
-<p><a href="">3. Why? Choose some situations</a></p>
-<p><a href="">4. Add situations</a></p>
-<p><a href="">5. Show a list of moods per day</a></p>
-<p><a href="">6. Chart</a></p>
+<p><a [routerLink]="['Person']">1. Name</a></p>
+<p><a [routerLink]="['Mood']">2. Choose a mood</a></p>
+<p><a [routerLink]="['SituationList']">3. Why? Choose some situations</a></p>
+<p><a [routerLink]="['SituationAdd']">4. Add situations</a></p>
+<p><a >5. Show a list of moods per day</a></p>
+<p><a >6. Chart</a></p>
 
-<!--<a [routerLink]="['Heroes']">Heroes</a>-->
-<!--<router-outlet></router-outlet>-->
+<router-outlet></router-outlet>

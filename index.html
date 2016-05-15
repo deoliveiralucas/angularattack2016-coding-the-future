@@ -14,9 +14,12 @@
     <script src="https://rumblex.s3.amazonaws.com/starter/@angular/compiler/compiler.umd.js"></script>
     <script src="https://rumblex.s3.amazonaws.com/starter/@angular/platform-browser/platform-browser.umd.js"></script>
     <script src="https://rumblex.s3.amazonaws.com/starter/@angular/platform-browser-dynamic/platform-browser-dynamic.umd.js"></script>
-    <!-- 2. Load our 'modules' -->
-    <script src='app/app.component.js'></script>
-    <script src='app/main.js'></script>
+
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
     <base href="/">
   </head>
   <!-- 3. Display the application -->
