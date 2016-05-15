@@ -1,16 +1,78 @@
+/*Fonts*/
+@font-face {
+    font-family: 'robotolight';
+    src: url('app/template/fonts/Roboto-light/roboto-light-webfont.woff2') format('woff2'),
+         url('app/template/fonts/Roboto-light/roboto-light-webfont.woff') format('woff'),
+         url('app/template/fonts/Roboto-light/roboto-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('app/template/fonts/Roboto/roboto-medium-webfont.woff2') format('woff2'),
+         url('app/template/fonts/Roboto/roboto-medium-webfont.woff') format('woff'),
+         url('app/template/Roboto/roboto-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**/
+input{
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    height: 44px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+    font-family: "robotolight";
+    color: #444444;
+    outline: none;
+    margin-bottom: 10px;
+}
+input[type="text"]{
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 10px;
+}
+p{
+    font-size: 16px;
+    font-family: "robotomedium";
+    margin-bottom: 10px;
+}
+button{
+    width: 30%;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid #666;
+    transition: all .5s;
+
+}
+button:hover{
+    cursor: pointer;
+    background-color: #666;
+    color: #fff;
+}
+.btn-wrapper{
+    width: 100%;
+}
 *{
     border: 0;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+.wrapper-input{
+    width: 99.04397705544933%;
+    margin-left: 4px;
+    margin-bottom: 10px;
+}
+/*Inputs*/
+
 
 .center{
     display: table;
     margin: 0 auto;
-    width: 80%;
-    height: 700px;
-    border: 1px solid black;
 }
 .loader {
       margin: 60px auto;
@@ -75,32 +137,32 @@
     .animation-happy,
     .animation-happy:after {
       border-radius: 50%;
-      width: 7em;
-      height: 7em;
+      width: 5em;
+      height: 5em;
     }
     .animation-good,
     .animation-good:after {
       border-radius: 50%;
-      width: 7em;
-      height: 7em;
+      width: 5em;
+      height: 5em;
     }
     .animation-normal,
     .animation-normal:after {
       border-radius: 50%;
-      width: 7em;
-      height: 7em;
+      width: 5em;
+      height: 5em;
     }
     .animation-bad,
     .animation-bad:after {
       border-radius: 50%;
-      width: 7em;
-      height: 7em;
+      width: 5em;
+      height: 5em;
     }
     .animation-awful,
     .animation-awful:after {
       border-radius: 50%;
-      width: 7em;
-      height: 7em;
+      width: 5em;
+      height: 5em;
     }
 /*Muds Style*/
     .animation-happy{
@@ -301,15 +363,15 @@ transform: rotate(-160deg);
     .wrapper-buttons-mud{
         width: 100%;
         min-height: 10px;
-        border: 1px solid #222;
         float: left;
+        background-color: #fff;
     }
     .wrapper-img{
-        width: 75%;
-/*            height: 88px;*/
+        width: 65px;
+        height: 64px;
         display: table;
-        margin-top: -86%;
-        margin-left: 14.5%;
+        margin-top: -87%;
+        margin-left: 9.5%;
         float: left;
     }
     .wrapper-img img{
@@ -319,7 +381,8 @@ transform: rotate(-160deg);
 .box-button{
     float: left;
     margin-left: 20px;
-    width: 11.27541589648799%;
+    width: 83px;
+    height: 100px;
 }
 
 /*Menu*/
@@ -428,6 +491,7 @@ header {
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
 }
+
 body{
     background-color: #999;
 }
@@ -437,4 +501,16 @@ body{
     margin: 0 auto;
     min-height: 100px;
     background-color: #ececec;
+}
+
+@media screen and (max-width: 500px){
+    .container{
+        width: 95%;
+    }
+    header{
+        width: 95%;
+    }
+    header nav{
+        width: 80%;
+    }
 }

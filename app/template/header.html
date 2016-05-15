@@ -9,20 +9,37 @@
 <body>
     <div class="container">
         <header>
-        <input type="checkbox" id="control-nav" />
-            <label for="control-nav" class="control-nav"></label>
-            <label for="control-nav" class="control-nav-close"></label>
-        <div class="logo"><img src="" alt=""></div>
-        <nav class="menu">
-           <ul>
-                <li><a href="#">Name</a></li>
-                <li><a href="#">Add a situation</a></li>
-                <li><a href="#">Why? Choose same Situation</a></li>
-            </ul>
-        </nav>
-    </header>
-    <h3>Mapping Mud Template</h3>
+            <input type="checkbox" id="control-nav" />
+                <label for="control-nav" class="control-nav"></label>
+                <label for="control-nav" class="control-nav-close"></label>
+            <div class="logo"><img src="" alt=""></div>
+            <nav class="menu">
+               <ul>
+                    <li><a href="#">Name</a></li>
+                    <li><a href="#">Add a situation</a></li>
+                    <li><a href="#">Why? Choose same Situation</a></li>
+                </ul>
+            </nav>
+        </header>
+<br><br>
+<br><br>
+<br>
 
+<div class="center">
+    <p>Wellcome to the Mapping Mood</p>
+</div>
+<div class="center">
+    <p>What's your name?</p>
+</div>
+<div class="wrapper-input">
+    <form #formPerson="ngForm" (ngSubmit)="onSubmit()">
+        <input type="text" id="person_name" placeholder="My name is..." [(ngModel)]="person.name" ngControl="name" #name="ngForm" autofocus>
+
+       <div class="btn-wrapper">
+        <button type="submit" class="center">Next</button>
+        </div>
+    </form>
+</div>
     </div>
 </body>
 </html>
