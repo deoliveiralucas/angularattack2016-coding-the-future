@@ -1,6 +1,11 @@
 Main causes of each mood
-<ul>
-    <li *ngFor="let event of mainEvents">
-        {{ event.mood }}: {{ event.event }}
-    </li>
-</ul>
+<div>
+    <ul>
+        <li *ngFor="let event of mainEvents">
+            {{ event.mood }}: 
+            <ul>
+                <li *ngFor="let mainEvent of event.events">- {{ mainEvent }}</li>
+            </ul>
+        </li>
+    </ul>
+</div>

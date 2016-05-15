@@ -6,7 +6,7 @@ import {Mood} from "./mood.model";
 import {Person} from "../person/person.model";
 
 @Component({
-    selector: 'my-app',
+    selector: 'my-mood',
     templateUrl: 'app/mood/mood.component.html',
     providers: [MoodService, PersonService]
 })
