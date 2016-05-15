@@ -78,7 +78,7 @@ input{
     margin-bottom: 10px;
 }
 input[type="text"]{
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #005bab;
     margin-bottom: 10px;
 }
 p{
@@ -94,6 +94,7 @@ button{
     transition: all .5s;
     padding: 0 10px;
     border-radius: 2px;
+    text-transform: uppercase;
 }
 button:hover{
     cursor: pointer;
