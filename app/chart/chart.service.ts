@@ -3,15 +3,15 @@
  */
 import { Injectable } from '@angular/core';
 
-import { MOODS } from './mock-chart';
+import { ENTRIES } from '../entries/mock-entries';
 
 @Injectable()
 export class ChartService {
-    getDataChart(moods) {
+    getDataChart(entries) {
         let response = [];
         let chartService = this;
 
-        moods.forEach(function(mood) {
+        entries.forEach(function(mood) {
             let date = chartService.formatDate(mood.time);
 
             if (response[date] === undefined) {
@@ -45,7 +45,7 @@ export class ChartService {
     }
 
     drawChart() {
-        var data = new google.visualization.arrayToDataTable(new ChartService().getDataChart(MOODS));
+        var data = new google.visualization.arrayToDataTable(new ChartService().getDataChart(ENTRIES));
 
         var options = {
             title: "My mood day-by-day \nYour mood could range from happy (5) until awful (1)",

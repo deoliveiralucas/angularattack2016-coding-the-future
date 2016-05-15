@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router-deprecated';
 import {EntriesService} from "./entries.service";
 import {Entries} from "./entries.model";
-import {MOODIES} from "../chart/mock-chart";
+import {ENTRIES} from "../entries/mock-entries";
 
 @Component({
     selector: 'my-app',
@@ -19,7 +19,7 @@ export class EntriesComponent implements OnInit {
 
     ngOnInit() {
         // this.entriesList = this._service.getStorage();
-        this.entriesList = MOODIES;
+        this.entriesList = ENTRIES;
     }
 
     onclickDelete(item: Entries) {
