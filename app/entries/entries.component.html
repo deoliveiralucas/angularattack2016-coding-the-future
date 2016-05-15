@@ -13,7 +13,7 @@
 <div *ngFor="let item of entriesList" class="entries flex-header">
     <div>
         <p>
-            <img src="../app/icons/{{item.mood}}.png" alt="{{item.mood}}!">
+            <img src="app/icons/{{item.moodImg}}.png" alt="{{item.mood}}!">
             <b>{{item.mood}}</b>
         </p>
         <p class="description"><label *ngFor="let item2 of item.events"> <span class="bull">&bull;</span> {{item2.description}}</label></p>

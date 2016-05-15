@@ -24,6 +24,7 @@ export class EntriesComponent implements OnInit {
             if (this.entriesList[x].time) {
                 this.entriesList[x].time = new Date(this.entriesList[x].time);
             }
+            this.entriesList[x].moodImg = this.entriesList[x].mood.toLowerCase();
         }
     }
 
