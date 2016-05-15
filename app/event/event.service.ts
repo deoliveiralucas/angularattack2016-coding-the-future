@@ -102,7 +102,9 @@ export class EventService {
             let key = tuples[i][0];
             let value = tuples[i][1];
 
-            commonEvents.push(key);
+            if (key !== '[object Object]') {
+                commonEvents.push(key);
+            }
         }
         return commonEvents;
     }
