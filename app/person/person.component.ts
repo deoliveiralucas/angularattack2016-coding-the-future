@@ -17,7 +17,9 @@ export class PersonComponent implements OnInit {
     ){}
 
     ngOnInit() {
-        
+        if (localStorage.getItem("person") !== null) {
+            this._router.navigate(['Mood']);
+        }
     }
 
     onSubmit() {
