@@ -1,1 +1,7 @@
-situation add
+<p>Add an activity</p>
+
+<form #formSituation="ngForm" (ngSubmit)="onSubmit()">
+    <input type="text" id="situation_description" placeholder="" [(ngModel)]="situation.description" ngControl="description" #description="ngForm" autofocus>
+
+    <button type="submit">Add</button>
+</form>
