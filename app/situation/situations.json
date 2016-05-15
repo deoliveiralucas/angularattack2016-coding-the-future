@@ -1,30 +1,90 @@
 [
-    {
-      "description": "Música",
-      "id": 1
-    },
-    {
-      "description": "Amigos",
-      "id": 2
-    },
-    {
-      "description": "Filmes",
-      "id": 3
-    },
-    {
-      "description": "Trabalho",
-      "id": 4
-    },
-    {
-      "description": "Estudo",
-      "id": 5
-    },
-    {
-      "description": "Discussão",
-      "id": 6
-    },
-    {
-      "description": "Briga",
-      "id": 7
-    }
-  ]
+  {
+    "description": "Music",
+    "id": 1
+  },
+  {
+    "description": "Friends",
+    "id": 2
+  },
+  {
+    "description": "Films",
+    "id": 3
+  },
+  {
+    "description": "Work",
+    "id": 4
+  },
+  {
+    "description": "Study",
+    "id": 5
+  },
+  {
+    "description": "Discussion",
+    "id": 6
+  },
+  {
+    "description": "Argue",
+    "id": 7
+  },
+  {
+    "description": "Sports",
+    "id": 8
+  },
+  {
+    "description": "Date",
+    "id": 9
+  },
+  {
+    "description": "Relationship",
+    "id": 10
+  },
+  {
+    "description": "Talk",
+    "id": 11
+  },
+  {
+    "description": "Internet",
+    "id": 13
+  },
+  {
+    "description": "Video Game",
+    "id": 14
+  },
+  {
+    "description": "Travel",
+    "id": 15
+  },
+  {
+    "description": "Party",
+    "id": 16
+  },
+  {
+    "description": "Children",
+    "id": 17
+  },
+  {
+    "description": "Animals",
+    "id": 18
+  },
+  {
+    "description": "Family",
+    "id": 19
+  },
+  {
+    "description": "Housecleaning",
+    "id": 20
+  },
+  {
+    "description": "Sing",
+    "id": 21
+  },
+  {
+    "description": "Money",
+    "id": 22
+  },
+  {
+    "description": "Food",
+    "id": 23
+  }
+]
