@@ -383,6 +383,9 @@ transform: rotate(-160deg);
     width: 83px;
     height: 100px;
 }
+.box-button:hover{
+    cursor: pointer;
+}
 
 /*Menu*/
 .logo{
@@ -503,8 +506,7 @@ body{
 }
 <<<<<<< HEAD
 
-@media screen and (max-width: 500px){
-    .container{
+@media screen and (max-width: 850px){
         width: 95%;
     }
     header{

@@ -1,7 +1,10 @@
-<p>Hey {{person.name}}, how are you felling now?</p>
+<div class="center">
+    <p>Hey {{person.name}}, how are you felling now?</p>
+</div>
 
 <div *ngFor="let item of moodsList">
     <div (click)="onclickSelectMood(item)">{{item.mood}}</div>
 </div>
-
-<button type="button" (click)="onclickNext()">Next</button>
+<div class="btn-wrapper">
+    <button class="center" type="button"(click)="onclickNext()">Next</button>
+</div>
