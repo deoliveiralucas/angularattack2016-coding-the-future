@@ -56,24 +56,24 @@ export class EventService {
 
         return [
             { 
-                'mood' : 'awful', 
-                'event': this.getCommonEvents(eventsMoodAwful)
+                'mood'  : 'awful', 
+                'events': this.getCommonEvents(eventsMoodAwful)
             },
             {
-                'mood': 'bad',
-                'event': this.getCommonEvents(eventsMoodBad)
+                'mood'  : 'bad',
+                'events': this.getCommonEvents(eventsMoodBad)
             },
             {
-                'mood': 'normal',
-                'event': this.getCommonEvents(eventsMoodNormal)
+                'mood'  : 'normal',
+                'events': this.getCommonEvents(eventsMoodNormal)
             },
             {
-                'mood': 'good',
-                'event': this.getCommonEvents(eventsMoodGood)
+                'mood'  : 'good',
+                'events': this.getCommonEvents(eventsMoodGood)
             },
             {
-                'mood': 'happy',
-                'event': this.getCommonEvents(eventsMoodHappy)
+                'mood'  : 'happy',
+                'events': this.getCommonEvents(eventsMoodHappy)
             }
         ];
     }
@@ -83,14 +83,28 @@ export class EventService {
     }
 
     getCommonEvents(events) {
-        let prevValue = 0;
-        let mostCommonEvent = 0;
-        for (let key in events) {
-            if (events[key] > prevValue) {
-                mostCommonEvent = key;
-            }
-            prevValue = events[key];
+        let tuples = [];
+
+        for (let key in events) tuples.push([key, events[key]]);
+
+        tuples.sort(this.compare);
+
+        let commonEvents = [];
+        let arrLength = (tuples.length > 3) ? 3 : tuples.length;
+
+        for (let i = 0; i < arrLength; i++) {
+            let key = tuples[i][0];
+            let value = tuples[i][1];
+
+            commonEvents.push(key);
         }
-        return mostCommonEvent;
+        return commonEvents;
+    }
+
+    private compare (a, b) {
+        let valueA = a[1];
+        let valueB = b[1];
+
+        return valueA > valueB ? -1 : (valueA < valueB ? 1 : 0);
     }
 }
