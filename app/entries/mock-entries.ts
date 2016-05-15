@@ -23,7 +23,7 @@ export let ENTRIES = [
     {
         mood: 'good',
         moodValue: 4,
-        events: ['gym', 'friends', 'book'],
+        events: ['gym', 'friends', 'book', 'family', 'family'],
         time: new Date(2016, 6, 10, 14, 0)
     },
     {

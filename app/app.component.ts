@@ -6,6 +6,7 @@ import {SituationAddComponent} from './situation/situation-add/situation-add.com
 import {SituationListComponent} from './situation/situation-list/situation-list.component';
 import {ChartComponent} from './chart/chart.component';
 import {EntriesComponent} from "./entries/entries.component";
+import {EventComponent} from "./event/event.component";
 
 @Component({
     selector: 'my-app',
@@ -20,7 +21,8 @@ import {EntriesComponent} from "./entries/entries.component";
     {path: '/situation/list',name: 'SituationList',component: SituationListComponent},
     {path: '/situation/add',name: 'SituationAdd',component: SituationAddComponent},
     {path: '/chart',name: 'Chart',component: ChartComponent},
-    {path: '/entries',name: 'Entries',component: EntriesComponent}
+    {path: '/entries',name: 'Entries',component: EntriesComponent},
+    {path: '/event',name: 'Event',component: EventComponent}
 ])
 
 export class AppComponent {

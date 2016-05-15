@@ -11,5 +11,13 @@ import { EventService } from './event.service';
     templateUrl: 'app/event/event.component.html'
 })
 export class EventComponent {
-    
+    private eventService: EventService;
+
+    constructor(eventService: EventService) {
+        this.eventService = eventService;
+    }
+
+    public ngOnInit() {
+        console.log(this.eventService.getEventsMood());
+    }
 }
