@@ -49,8 +49,6 @@ export class ChartService {
 
         var options = {
             title: "My mood day-by-day \nYour mood could range from happy (5) until awful (1)",
-            width: '100%',
-            height: 300,
             bar: { groupWidth: "95%" },
             legend: { position: "none" },
         };
