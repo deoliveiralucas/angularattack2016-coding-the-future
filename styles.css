@@ -361,7 +361,6 @@ transform: rotate(-160deg);
 }
 }
     .wrapper-buttons-mud{
-        width: 100%;
         min-height: 10px;
         float: left;
         background-color: #fff;
