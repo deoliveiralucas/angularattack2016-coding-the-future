@@ -9,11 +9,11 @@ import { ENTRIES } from '../entries/mock-entries';
 export class EventService {
     getEventsMood() {
         let entries = this.getEntries();
-        let eventsMoodAwful = [];
-        let eventsMoodBad = [];
-        let eventsMoodNormal = [];
-        let eventsMoodGood = [];
-        let eventsMoodHappy = [];
+        let eventsMoodAwful   = [];
+        let eventsMoodBad     = [];
+        let eventsMoodNormal  = [];
+        let eventsMoodGood    = [];
+        let eventsMoodHappy   = [];
 
         entries.forEach(function (entry) {
             if (entry.moodValue == 1) {
