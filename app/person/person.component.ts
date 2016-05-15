@@ -4,7 +4,7 @@ import {PersonService} from '../person/person.service';
 import {Person} from '../person/person.model';
 
 @Component({
-    selector: 'my-app',
+    selector: 'my-person',
     templateUrl: 'app/person/person.component.html',
     providers: [PersonService]
 })

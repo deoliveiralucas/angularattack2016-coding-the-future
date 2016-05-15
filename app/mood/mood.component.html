@@ -1,6 +1,6 @@
 <p>Hey {{person.name}}, how are you felling now?</p>
 
-<div *ngFor="#item of moodsList">
+<div *ngFor="let item of moodsList">
     <div (click)="onclickSelectMood(item)">{{item.mood}}</div>
 </div>
 
