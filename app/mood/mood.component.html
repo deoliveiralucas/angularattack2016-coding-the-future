@@ -1,7 +1,15 @@
 <p>Hey {{person.name}}, how are you felling now?</p>
 
-<div *ngFor="let item of moodsList">
-    <div (click)="onclickSelectMood(item)">{{item.mood}}</div>
-</div>
+<div class="center">
+   <div class="wrapper-buttons-mud"><!-- Wrapper all buttons/options of mud-->
+        <div class="box-button" *ngFor="let item of moodsList" (click)="onclickSelectMood(item)">
+            <div class="animation-{{item.cssClass}}"></div>
+            <div class="wrapper-img">
+                <img src="/app/icons/{{item.cssClass}}.png" alt="{{item.mood}}!">
+            </div>
+        </div>
+    </div>
 
-<button type="button" (click)="onclickNext()">Next</button>
+    <br>
+    <button type="button" (click)="onclickNext()">Next</button>
+</div>

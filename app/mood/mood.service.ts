@@ -15,11 +15,11 @@ export class MoodService {
 
     public moodsList() {
         return [
-            {mood: "Happy", moodValue: 1},
-            {mood: "Good", moodValue: 2},
-            {mood: "Normal", moodValue: 3},
-            {mood: "Bad", moodValue: 4},
-            {mood: "Awful", moodValue: 5}
+            { mood: "Happy", moodValue: 5, cssClass: 'happy'},
+            { mood: "Good", moodValue: 4, cssClass: 'good' },
+            { mood: "Normal", moodValue: 3, cssClass: 'normal' },
+            { mood: "Bad", moodValue: 2, cssClass: 'bad' },
+            { mood: "Awful", moodValue: 1, cssClass: 'awful' }
         ];
     }
 }
