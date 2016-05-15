@@ -438,3 +438,7 @@ body{
     min-height: 100px;
     background-color: #ececec;
 }
+.content {
+    position: relative;
+    top: 60px;
+}

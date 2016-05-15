@@ -26,5 +26,5 @@ import {EventComponent} from "./event/event.component";
 ])
 
 export class AppComponent {
-    
+    title = "Mapping Mood";
 }
