@@ -1,1 +1,8 @@
-situation list
+<p>Choose an activity</p>
+
+<div *ngFor="let item of list">
+    <div (click)="onclickSelectSituation(item)">{{item.description}}</div>
+</div>
+
+<button type="button" (click)="onclickNext()">Ok</button>
+<button type="button" (click)="onclickNew()">New Activity</button>

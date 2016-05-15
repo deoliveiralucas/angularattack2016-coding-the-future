@@ -18,8 +18,8 @@ import {EventComponent} from "./event/event.component";
     {path: '/', redirectTo: ['Person']},
     {path: '/person',name: 'Person',component: PersonComponent, useAsDefault: true},
     {path: '/mood',name: 'Mood',component: MoodComponent},
-    {path: '/situation/list',name: 'SituationList',component: SituationListComponent},
-    {path: '/situation/add',name: 'SituationAdd',component: SituationAddComponent},
+    {path: '/situationlist',name: 'SituationList',component: SituationListComponent},
+    {path: '/situationadd',name: 'SituationAdd',component: SituationAddComponent},
     {path: '/chart',name: 'Chart',component: ChartComponent},
     {path: '/entries',name: 'Entries',component: EntriesComponent},
     {path: '/event',name: 'Event',component: EventComponent}
