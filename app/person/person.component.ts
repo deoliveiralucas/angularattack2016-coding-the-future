@@ -9,7 +9,7 @@ import {Person} from '../person/person.model';
     providers: [PersonService]
 })
 export class PersonComponent implements OnInit {
-    public person: Person = new Person;
+    public person: Person = new Person();
     
     constructor(
         private _service: PersonService,

@@ -1,1 +1,7 @@
-mood
+<p>Hey {{person.name}}, how are you felling now?</p>
+
+<div *ngFor="#item of moodsList">
+    <div (click)="onclickSelectMood(item)">{{item.mood}}</div>
+</div>
+
+<button type="button" (click)="onclickNext()">Next</button>
