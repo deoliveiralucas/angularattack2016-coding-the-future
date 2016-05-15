@@ -8,9 +8,7 @@
     </div>
 </div>
 
-<p></p>
-
-<p *ngIf="entriesList.length === 0">No entries</p>
+<p *ngIf="entriesList.length === 0" class="ml++">No entries! Add new mood</p>
 
 <div *ngFor="let item of entriesList" class="entries flex-header">
     <div>
