@@ -51,7 +51,8 @@ export class ChartService {
     }
 
     drawChart() {
-        var data = new google.visualization.arrayToDataTable(new ChartService().getDataChart(ENTRIES));
+        let entries = JSON.parse(localStorage.getItem("entries"));
+        var data = new google.visualization.arrayToDataTable(new ChartService().getDataChart(entries));
 
         var options = {
             title: "My mood day-by-day \nYour mood could range from happy (5) until awful (1)",
@@ -72,6 +73,7 @@ export class ChartService {
             "Sep", "Oct", "Nov", "Dec"
         ];
 
+        let date = new Date(date);
         let day = date.getDate();
         let monthIndex = date.getMonth();
         let year = date.getFullYear();
