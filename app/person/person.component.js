@@ -16,7 +16,7 @@ var PersonComponent = (function () {
     function PersonComponent(_service, _router) {
         this._service = _service;
         this._router = _router;
-        this.person = new person_model_1.Person;
+        this.person = new person_model_1.Person();
     }
     PersonComponent.prototype.ngOnInit = function () {
     };
