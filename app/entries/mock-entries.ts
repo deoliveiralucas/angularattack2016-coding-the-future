@@ -1,7 +1,7 @@
 /**
  * Created by deoliveiralucas on 14/05/2016
  */
-export let MOODS = [
+export let ENTRIES = [
     {
         mood: 'awful',
         moodValue: 1,
@@ -23,7 +23,7 @@ export let MOODS = [
     {
         mood: 'good',
         moodValue: 4,
-        events: ['gym', 'friends', 'book'],
+        events: ['gym', 'friends', 'book', 'family', 'family'],
         time: new Date(2016, 6, 10, 14, 0)
     },
     {

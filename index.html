@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="styles.css">
     <!-- 1. Load libraries -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', { 'packages': ['corechart'] });
+    </script>
 
     <!-- IE required polyfill -->
     <script src="https://rumblex.s3.amazonaws.com/starter/es6-shim/es6-shim.min.js"></script>
@@ -17,7 +20,7 @@
     <script src="https://rumblex.s3.amazonaws.com/starter/@angular/platform-browser/platform-browser.umd.js"></script>
     <script src="https://rumblex.s3.amazonaws.com/starter/@angular/platform-browser-dynamic/platform-browser-dynamic.umd.js"></script>
 
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.27/system.src.js"></script>
     <script src="systemjs.config.js"></script>
     <script>
       System.import('app').catch(function(err){ console.error(err); });

@@ -1,0 +1,13 @@
+<p>Entries</p>
+
+<div *ngFor="#item of entriesList">
+    <div>
+        <p><b>{{item.mood}}</b></p>
+        <p><label *ngFor="#item2 of item.events">{{item2}} / </label></p>
+        <p>{{item.time | date: "MMM/dd - HH:mm"}}</p>
+        <button (click)="onclickDelete(item)">Delete</button>
+    </div>
+</div>
+
+<button type="button" (click)="onclickGoToCharts()">View Charts</button>
+<button type="button" (click)="onclickNew()">New Mood</button>

@@ -3,13 +3,15 @@
  */
 import { Injectable } from '@angular/core';
 
+import { ENTRIES } from '../entries/mock-entries';
+
 @Injectable()
 export class ChartService {
-    getDataChart(moods) {
+    getDataChart(entries) {
         let response = [];
         let chartService = this;
 
-        moods.forEach(function(mood) {
+        entries.forEach(function(mood) {
             let date = chartService.formatDate(mood.time);
 
             if (response[date] === undefined) {
@@ -38,41 +40,31 @@ export class ChartService {
         return arrData;
     }
 
-    renderChart(moods) {
-        let dataChart = this.getDataChart(moods);
+    renderChart() {
+        google.charts.setOnLoadCallback(this.drawChart);
+    }
 
-        google.charts.load('current', { 'packages': ['corechart'] });
-        google.charts.setOnLoadCallback(function() {
-            var data = google.visualization.arrayToDataTable(dataChart);
+    drawChart() {
+        var data = new google.visualization.arrayToDataTable(new ChartService().getDataChart(ENTRIES));
 
-            var options = {
-                title: "My mood day-by-day \nYour mood could range from happy (5) until awful (1)",
-                width: '100%',
-                height: 300,
-                bar: { groupWidth: "95%" },
-                legend: { position: "none" },
-            };
+        var options = {
+            title: "My mood day-by-day \nYour mood could range from happy (5) until awful (1)",
+            width: '100%',
+            height: 300,
+            bar: { groupWidth: "95%" },
+            legend: { position: "none" },
+        };
 
-            var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
 
-            chart.draw(data, options);
-        });
+        chart.draw(data, options);
     }
 
     private formatDate(date: Date) {
         let monthNames = [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec"
+            "Jan", "Feb", "Mar", "Apr",
+            "May", "Jun", "Jul", "Aug",
+            "Sep", "Oct", "Nov", "Dec"
         ];
 
         let day = date.getDate();
