@@ -55,7 +55,10 @@ export class SituationListComponent implements OnInit {
         }
 
         if (!found) {
+            document.getElementById("item_"+item.id).classList.add("selected");
             this.listSelected.push(item);
+        } else {
+            document.getElementById("item_"+item.id).classList.remove("selected");
         }
     }
 

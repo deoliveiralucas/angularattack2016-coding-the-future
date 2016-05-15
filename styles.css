@@ -17,6 +17,48 @@
     font-style: normal;
 }
 
+.m\+ {
+margin: 8px;
+}
+.m\+\+ {
+margin: 16px;
+}
+.mb\+\+ {
+margin-bottom: 16px;
+}
+.mt\+\+ {
+margin-top: 16px;
+}
+.ml\+\+ {
+margin-left: 16px;
+}
+.mr\+\+ {
+margin-right: 16px;
+}
+.mb\+ {
+margin-bottom: 8px;
+}
+.mt\+ {
+margin-top: 8px;
+}
+.ml\+ {
+margin-left: 8px;
+}
+.mr\+ {
+margin-right: 8px;
+}
+.mt0 {
+margin-top: 0 !important;
+}
+
+.pl0 {
+padding-left: 0;
+}
+.cursor-pointer {
+cursor: pointer;
+}
+
+
 /**/
 input{
     width: 100%;
@@ -41,11 +83,13 @@ p{
     margin-bottom: 10px;
 }
 button{
-    width: 30%;
+    width: 115px;
     height: 30px;
-    background-color: transparent;
-    border: 1px solid #666;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 5px #ccc;
     transition: all .5s;
+    padding: 0 10px;
+    border-radius: 2px;
 
 }
 button:hover{
@@ -405,6 +449,13 @@ header {
     width: 57.91505791505792%;
 }
 
+header .title {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 22px;
+}
+
   header .control-nav {
     position: absolute;
     right: 20px;
@@ -523,3 +574,56 @@ body{
     top: 60px;
 }
 
+.title {
+    margin: 16px;
+}
+
+.situations {
+
+}
+.situations div {
+    border-bottom: 1px solid #ddd;
+    padding: 8px 16px;
+}
+.situations div:hover {
+    background-color: #E2DCDD;
+    cursor: pointer;
+}
+.situations div:before {
+    content: '\2022';
+    color: #E2B60F;
+    font-size: 27px;
+    margin-right: 16px;
+}
+.situations div .select {
+    width: 20px;
+    height: 20px;
+    border-radius: 21px;
+    background-color: #DCDCDC;
+    border: 1px solid #BFBFBF;
+    float: right;
+    margin-right: 16px;
+    top: 6px;
+}
+.situations div .selected {
+    background-color: darkblue;
+}
+.situations div span {
+    position: relative;
+    top: -4px;
+}
+.flex-header {
+    display: -webkit-flex;
+    display: flex;
+}
+.flex-header div:first-child {
+    flex: 6;
+    -webkit-flex: 6;
+    -ms-flex: 6;
+}
+.flex-header div.buttons {
+    text-align: right;
+    position: relative;
+    top: 12px;
+    right: 16px;
+}

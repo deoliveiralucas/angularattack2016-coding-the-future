@@ -1,8 +1,17 @@
-<p>Choose an activity</p>
-
-<div *ngFor="let item of list">
-    <div (click)="onclickSelectSituation(item)">{{item.description}}</div>
+<div class="flex-header">
+    <div>
+        <p class="title">Choose an activity</p>
+    </div>
+    <div class="buttons">
+        <button type="button" (click)="onclickNew()">New Activity</button>
+        <button type="button" (click)="onclickNext()">Ok</button>
+    </div>
 </div>
 
-<button type="button" (click)="onclickNext()">Ok</button>
-<button type="button" (click)="onclickNew()">New Activity</button>
+<div *ngFor="let item of list" class="situations p++">
+    <div (click)="onclickSelectSituation(item)">
+        <span>{{item.description}}</span>
+        <span class="select" id="item_{{item.id}}"></span>
+    </div>
+</div>
+
