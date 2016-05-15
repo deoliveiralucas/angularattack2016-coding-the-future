@@ -1,11 +1,12 @@
-<div class="center">
-    <p>Add an activity</p>
-</div>
-<div class="wrapper-input">
-    <form #formSituation="ngForm" (ngSubmit)="onSubmit()">
-        <input type="text" id="situation_description" placeholder="" [(ngModel)]="situation.description" ngControl="description" #description="ngForm" autofocus>
-    <div class="btn-wrapper">
-        <button class="center" type="submit">Add</button>
+<form #formSituation="ngForm" (ngSubmit)="onSubmit()">
+    <div class="flex-header">
+        <div>
+            <p class="page-title">Add an activity</p>
+        </div>
+        <div class="buttons">
+            <button type="submit">Add</button>
+        </div>
     </div>
-    </form>
-</div>
+
+    <input type="text" id="situation_description" placeholder="write here" [(ngModel)]="situation.description" ngControl="description" #description="ngForm" autofocus>
+</form>

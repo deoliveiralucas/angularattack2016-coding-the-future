@@ -1,21 +1,27 @@
-<div class="center">
-    <p>Entries</p>
-</div>
-
-<p *ngIf="entriesList.length === 0">No entries</p>
-
-<div *ngFor="#item of entriesList">
+<div class="flex-header">
     <div>
-        <p><b>{{item.mood}}</b></p>
-        <p><label *ngFor="#item2 of item.events">{{item2.description}} / </label></p>
-        <p>{{item.time | date: "MMM/dd - HH:mm"}}</p>
-        <button (click)="onclickDelete(item)">Delete</button>
+        <p class="page-title">Entries</p>
+    </div>
+    <div class="buttons">
+        <button type="button" (click)="onclickGoToCharts()">View Charts</button>
+        <button type="button" (click)="onclickNew()">New Mood</button>
     </div>
 </div>
 
-<div class="btn-wrapper">
-    <button class="center" type="button" (click)="onclickGoToCharts()">View Charts</button>
-</div>
-<div class="btn-wrapper">
-    <button class="center" type="button" (click)="onclickNew()">New Mood</button>
+<p></p>
+
+<p *ngIf="entriesList.length === 0">No entries</p>
+
+<div *ngFor="let item of entriesList" class="entries flex-header">
+    <div>
+        <p>
+            <img src="../app/icons/{{item.mood}}.png" alt="{{item.mood}}!">
+            <b>{{item.mood}}</b>
+        </p>
+        <p class="description"><label *ngFor="let item2 of item.events"> <span class="bull">&bull;</span> {{item2.description}}</label></p>
+        <p class="time">{{item.time | date: "MMM/dd - HH:mm"}}</p>
+    </div>
+    <div>
+        <button (click)="onclickDelete(item)">Delete</button>
+    </div>
 </div>
