@@ -20,7 +20,13 @@ export class SituationListComponent implements OnInit {
     ){}
 
     ngOnInit() {
-        this.getHeroes();
+        var local: Array<Situation> = this._service.getStorage();
+        if (local) {
+            this.list = local;
+            this._service.setStorage(local);
+        } else {
+            this.getHeroes();
+        }
     }
 
     getHeroes() {

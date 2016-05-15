@@ -32,6 +32,6 @@ export class SituationAddComponent implements OnInit {
     }
 
     onclickGoToEntries() {
-        this._router.navigate(['Entries']);
+        this._router.navigate(['SituationList']);
     }
 }
