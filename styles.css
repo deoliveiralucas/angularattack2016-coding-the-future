@@ -671,3 +671,9 @@ body{
     list-style: none;
     display: inline;
 }
+
+.preloader {
+    text-align: center;
+    position: relative;
+    top: 130px;
+}
