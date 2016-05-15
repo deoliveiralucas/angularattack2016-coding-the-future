@@ -32,7 +32,7 @@ var SituationAddComponent = (function () {
         this.onclickGoToEntries();
     };
     SituationAddComponent.prototype.onclickGoToEntries = function () {
-        this._router.navigate(['Entries']);
+        this._router.navigate(['SituationList']);
     };
     SituationAddComponent = __decorate([
         core_1.Component({

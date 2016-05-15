@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Situation} from '../situation/situation.model';
-import {Http, Response, HTTP_PROVIDERS} from '@angular/http';
+import {Http} from '@angular/http';
 
 @Injectable()
 export class SituationService {
@@ -8,7 +8,7 @@ export class SituationService {
         private _http: Http
     ) {}
 
-    public setStorage(item: Situation) {
+    public setStorage(item: Array<Situation>) {
         var object: string = JSON.stringify(item);
         localStorage.setItem('situations', object);
     }
@@ -29,7 +29,7 @@ export class SituationService {
     }
     
     public onGetAll(done: any) {
-        this._http.get('app/situation/situation-list/situations.json')
+        this._http.get('app/situation/situations.json')
             .map(res => res.json())
             .subscribe(
                 result => done(result),
