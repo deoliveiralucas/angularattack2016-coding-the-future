@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="center">
     <p>Choose an activity</p>
 </div>
@@ -11,3 +12,22 @@
 <div class="btn-wrapper">
     <button class="center" type="button" (click)="onclickNew()">New Activity</button>
 </div>
+=======
+<div class="flex-header">
+    <div>
+        <p class="page-title">Choose an activity</p>
+    </div>
+    <div class="buttons">
+        <button type="button" (click)="onclickNew()">New Activity</button>
+        <button type="button" (click)="onclickNext()">Ok</button>
+    </div>
+</div>
+
+<div *ngFor="let item of list" class="situations p++">
+    <div (click)="onclickSelectSituation(item)">
+        <span>{{item.description}}</span>
+        <span class="select" id="item_{{item.id}}"></span>
+    </div>
+</div>
+
+>>>>>>> 88c7848b76a56259f55e3403d4ebe89b10c7b7fb
