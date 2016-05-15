@@ -22,10 +22,13 @@ export class SituationAddComponent implements OnInit {
 
     onSubmit() {
         var itens: any = this._service.getStorage();
+        var newSituation: any = this.situation;
         if (itens) {
-            itens.push(this.situation);
+            newSituation.id = itens.length + 1;
+            itens.push(newSituation);
         } else {
-            itens = [this.situation];
+            newSituation.id = 1;
+            itens = [newSituation];
         }
         this._service.setStorage(itens);
         this.onclickGoToEntries();

@@ -28,6 +28,7 @@ export class MoodComponent implements OnInit {
 
     onclickSelectMood(item: Mood) {
         this.selectedMood = item;
+        this.onclickNext();
     }
 
     onclickNext() {
