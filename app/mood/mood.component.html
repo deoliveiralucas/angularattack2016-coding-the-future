@@ -2,14 +2,6 @@
     <p>Hey {{person.name}}, how are you felling now?</p>
 </div>
 
-<<<<<<< HEAD
-<div *ngFor="let item of moodsList">
-    <div (click)="onclickSelectMood(item)">{{item.mood}}</div>
-</div>
-<div class="btn-wrapper">
-    <button class="center" type="button"(click)="onclickNext()">Next</button>
-</div>
-=======
 <div class="center">
    <div class="wrapper-buttons-mud"><!-- Wrapper all buttons/options of mud-->
         <div class="box-button" *ngFor="let item of moodsList" (click)="onclickSelectMood(item)">
@@ -23,4 +15,3 @@
     <br>
     <button type="button" (click)="onclickNext()">Next</button>
 </div>
->>>>>>> a50c87ee9216d22385f658671cdfd20ee408f6d6
