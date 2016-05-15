@@ -11,6 +11,7 @@ import { EventService } from './event.service';
     templateUrl: 'app/event/event.component.html'
 })
 export class EventComponent {
+    public mainEvents: Array<any>;
     private eventService: EventService;
 
     constructor(eventService: EventService) {
@@ -18,6 +19,6 @@ export class EventComponent {
     }
 
     public ngOnInit() {
-        console.log(this.eventService.getEventsMood());
+        this.mainEvents = this.eventService.getEventsMood();
     }
 }

@@ -54,13 +54,28 @@ export class EventService {
             }
         });
 
-        return {
-            'awful' : this.getCommonEvents(eventsMoodAwful),
-            'bad'   : this.getCommonEvents(eventsMoodBad),
-            'normal': this.getCommonEvents(eventsMoodNormal),
-            'good'  : this.getCommonEvents(eventsMoodGood),
-            'happy' : this.getCommonEvents(eventsMoodHappy)
-        };
+        return [
+            { 
+                'mood' : 'awful', 
+                'event': this.getCommonEvents(eventsMoodAwful)
+            },
+            {
+                'mood': 'bad',
+                'event': this.getCommonEvents(eventsMoodBad)
+            },
+            {
+                'mood': 'normal',
+                'event': this.getCommonEvents(eventsMoodNormal)
+            },
+            {
+                'mood': 'good',
+                'event': this.getCommonEvents(eventsMoodGood)
+            },
+            {
+                'mood': 'happy',
+                'event': this.getCommonEvents(eventsMoodHappy)
+            }
+        ];
     }
 
     getEntries() {

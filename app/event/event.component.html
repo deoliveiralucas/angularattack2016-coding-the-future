@@ -1,1 +1,6 @@
-Events
+Main causes of each mood
+<ul>
+    <li *ngFor="let event of mainEvents">
+        {{ event.mood }}: {{ event.event }}
+    </li>
+</ul>
