@@ -316,11 +316,11 @@ transform: rotate(-160deg);
         width: 100%;
         height: 100%;
     }
-    .box-button{
-        float: left;
-        margin-left: 20px;
-        width: 11.27541589648799%;
-    }
+.box-button{
+    float: left;
+    margin-left: 20px;
+    width: 11.27541589648799%;
+}
 
 /*Menu*/
 .logo{
@@ -329,33 +329,17 @@ transform: rotate(-160deg);
     height: 100%;
 }
 header {
-  min-height: 60px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 2px solid #777;
-  background: #ECECEC;
-  z-index: 2;
+    min-height: 60px;
+    position: fixed;
+    top: 0;
+    right: auto;
+    left: auto;
+    border-bottom: 2px solid #777;
+    background: #ECECEC;
+    z-index: 2;
+    width: 57.91505791505792%;
 }
-.menu{
-    float: left;
-}
-.menu ul{
-    list-style: none;
-    margin-top: 20px;
-}
-.menu ul li{
-    float: left;
-    margin-left: 20px;
-}
-.menu li a{
-    float: left;
-    font-size: 16px;
-    color: #333;
-    text-decoration: none;
-}
-@media screen and (max-width: 767px) {
+
   header .control-nav {
     position: absolute;
     right: 20px;
@@ -397,7 +381,7 @@ header {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 250px;
+    width: 45%;
     border-left: 1px solid #ccc;
     background: #fff;
     overflow-x: auto;
@@ -429,7 +413,7 @@ header {
 .menu li:hover{
     background-color: #ececec;
 }
-}
+
 #control-nav{
     visibility: hidden;
 }
