@@ -1,1 +1,8 @@
-person
+<p>Wellcome to the Mapping Mood</p>
+
+<p>What's your name?</p>
+<form #formPerson="ngForm" (ngSubmit)="onSubmit()">
+    <input type="text" id="person_name" placeholder="" [(ngModel)]="person.name" ngControl="name" #name="ngForm" autofocus>
+
+    <button type="submit">Next</button>
+</form>
