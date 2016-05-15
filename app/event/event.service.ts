@@ -7,6 +7,8 @@ import { ENTRIES } from '../entries/mock-entries';
 
 @Injectable()
 export class EventService {
+    private entries: Array<any>;
+
     getEventsMood() {
         let entries = this.getEntries();
         let eventsMoodAwful   = [];
@@ -18,36 +20,36 @@ export class EventService {
         entries.forEach(function (entry) {
             if (entry.moodValue == 1) {
                 entry.events.forEach(function (event) {
-                    if (eventsMoodAwful[event] === undefined) {
-                        eventsMoodAwful[event] = 0;    
+                    if (eventsMoodAwful[event.description] === undefined) {
+                        eventsMoodAwful[event.description] = 0;    
                     }
-                    eventsMoodAwful[event] += 1;
+                    eventsMoodAwful[event.description] += 1;
                 });
             } else if (entry.moodValue == 2) {
                 entry.events.forEach(function(event) {
-                    if (eventsMoodBad[event] === undefined) {
-                        eventsMoodBad[event] = 0;
+                    if (eventsMoodBad[event.description] === undefined) {
+                        eventsMoodBad[event.description] = 0;
                     }
-                    eventsMoodBad[event] += 1;
+                    eventsMoodBad[event.description] += 1;
                 });
             } else if (entry.moodValue == 3) {
                 entry.events.forEach(function(event) {
-                    if (eventsMoodNormal[event] === undefined) {
-                        eventsMoodNormal[event] = 0;
+                    if (eventsMoodNormal[event.description] === undefined) {
+                        eventsMoodNormal[event.description] = 0;
                     }
-                    eventsMoodNormal[event] += 1;
+                    eventsMoodNormal[event.description] += 1;
                 });
             } else if (entry.moodValue == 4) {
                 entry.events.forEach(function(event) {
-                    if (eventsMoodGood[event] === undefined) {
-                        eventsMoodGood[event] = 0;
+                    if (eventsMoodGood[event.description] === undefined) {
+                        eventsMoodGood[event.description] = 0;
                     }
-                    eventsMoodGood[event] += 1;
+                    eventsMoodGood[event.description] += 1;
                 });
             } else if (entry.moodValue == 5) {
                 entry.events.forEach(function(event) {
-                    if (eventsMoodHappy[event] === undefined) {
-                        eventsMoodHappy[event] = 0;
+                    if (eventsMoodHappy[event.description] === undefined) {
+                        eventsMoodHappy[event.description] = 0;
                     }
                     eventsMoodHappy[event] += 1;
                 });
@@ -79,7 +81,11 @@ export class EventService {
     }
 
     getEntries() {
-        return ENTRIES;
+        return this.entries;
+    }
+
+    setEntries(entries) {
+        this.entries = entries;
     }
 
     getCommonEvents(events) {
@@ -88,7 +94,7 @@ export class EventService {
         for (let key in events) tuples.push([key, events[key]]);
 
         tuples.sort(this.compare);
-
+    
         let commonEvents = [];
         let arrLength = (tuples.length > 3) ? 3 : tuples.length;
 
