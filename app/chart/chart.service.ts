@@ -45,7 +45,6 @@ export class ChartService {
 
         (function ($) {
             $(window).on('resize', function() {
-                console.log('opa');
                 google.charts.setOnLoadCallback(new ChartService().drawChart);
             });
         })(jQuery);
