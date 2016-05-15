@@ -8,9 +8,11 @@
     </div>
 </div>
 
-<div *ngFor="let item of list" class="situations p++">
-    <div (click)="onclickSelectSituation(item)">
-        <span>{{item.description}}</span>
-        <span class="select" id="item_{{item.id}}"></span>
+<div>
+    <div *ngFor="let item of list" class="situations p++">
+        <div (click)="onclickSelectSituation(item)">
+            <span>{{item.description}}</span>
+            <span class="select" id="item_{{item.id}}"></span>
+        </div>
     </div>
 </div>
