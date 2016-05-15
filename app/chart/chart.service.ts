@@ -5,11 +5,11 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ChartService {
-    getDataChart(moodies) {
+    getDataChart(moods) {
         let response = [];
         let chartService = this;
 
-        moodies.forEach(function(mood) {
+        moods.forEach(function(mood) {
             let date = chartService.formatDate(mood.time);
 
             if (response[date] === undefined) {
@@ -38,8 +38,8 @@ export class ChartService {
         return arrData;
     }
 
-    renderChart(moodies) {
-        let dataChart = this.getDataChart(moodies);
+    renderChart(moods) {
+        let dataChart = this.getDataChart(moods);
 
         google.charts.load('current', { 'packages': ['corechart'] });
         google.charts.setOnLoadCallback(function() {
