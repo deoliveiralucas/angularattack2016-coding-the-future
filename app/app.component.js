@@ -14,6 +14,7 @@ var person_component_1 = require('./person/person.component');
 var mood_component_1 = require('./mood/mood.component');
 var situation_add_component_1 = require('./situation/situation-add/situation-add.component');
 var situation_list_component_1 = require('./situation/situation-list/situation-list.component');
+var chart_component_1 = require('./chart/chart.component');
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -29,7 +30,8 @@ var AppComponent = (function () {
             { path: '/person', name: 'Person', component: person_component_1.PersonComponent, useAsDefault: true },
             { path: '/mood', name: 'Mood', component: mood_component_1.MoodComponent },
             { path: '/situation/list', name: 'SituationList', component: situation_list_component_1.SituationListComponent },
-            { path: '/situation/add', name: 'SituationAdd', component: situation_add_component_1.SituationAddComponent }
+            { path: '/situation/add', name: 'SituationAdd', component: situation_add_component_1.SituationAddComponent },
+            { path: '/chart', name: 'Chart', component: chart_component_1.ChartComponent }
         ]), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
