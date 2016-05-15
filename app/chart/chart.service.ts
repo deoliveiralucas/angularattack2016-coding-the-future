@@ -3,6 +3,8 @@
  */
 import { Injectable } from '@angular/core';
 
+import { MOODS } from './mock-chart';
+
 @Injectable()
 export class ChartService {
     getDataChart(moods) {
@@ -38,25 +40,24 @@ export class ChartService {
         return arrData;
     }
 
-    renderChart(moods) {
-        let dataChart = this.getDataChart(moods);
+    renderChart() {
+        google.charts.setOnLoadCallback(this.drawChart);
+    }
 
-        google.charts.load('current', { 'packages': ['corechart'] });
-        google.charts.setOnLoadCallback(function() {
-            var data = google.visualization.arrayToDataTable(dataChart);
+    drawChart() {
+        var data = new google.visualization.arrayToDataTable(new ChartService().getDataChart(MOODS));
 
-            var options = {
-                title: "My mood day-by-day \nYour mood could range from happy (5) until awful (1)",
-                width: '100%',
-                height: 300,
-                bar: { groupWidth: "95%" },
-                legend: { position: "none" },
-            };
+        var options = {
+            title: "My mood day-by-day \nYour mood could range from happy (5) until awful (1)",
+            width: '100%',
+            height: 300,
+            bar: { groupWidth: "95%" },
+            legend: { position: "none" },
+        };
 
-            var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
 
-            chart.draw(data, options);
-        });
+        chart.draw(data, options);
     }
 
     private formatDate(date: Date) {

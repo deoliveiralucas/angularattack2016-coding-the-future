@@ -3,7 +3,6 @@
  */
 import { Component } from '@angular/core';
 
-import { MOODS } from './mock-chart';
 import { ChartService } from './chart.service';
 
 @Component({
@@ -12,7 +11,13 @@ import { ChartService } from './chart.service';
     templateUrl: 'app/chart/chart.component.html'
 })
 export class ChartComponent { 
-    constructor(private chartService: ChartService) {
-        chartService.renderChart(MOODS);
+    private chartService: ChartService;
+
+    constructor(chartService: ChartService) { 
+        this.chartService = chartService;
+    }
+
+    public ngOnInit() {
+        this.chartService.renderChart();
     }
 }
