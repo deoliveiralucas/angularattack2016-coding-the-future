@@ -1,12 +1,12 @@
-<div class="center">
-    <p>Main causes of each mood</p>
+<div class="m++">
+    <p>About my mood</p>
 </div>
 <div>
-    <ul>
+    <ul class="events">
         <li *ngFor="let event of mainEvents">
-            {{ event.mood }}:
+            {{ event.mood | uppercase }}
             <ul>
-                <li *ngFor="let mainEvent of event.events">- {{ mainEvent }}</li>
+                <li *ngFor="let mainEvent of event.events"> <span class="bull">&bull;</span>  {{ mainEvent }}</li>
             </ul>
         </li>
     </ul>

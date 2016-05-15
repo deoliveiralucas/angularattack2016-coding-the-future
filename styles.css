@@ -87,7 +87,7 @@ p{
     margin-bottom: 10px;
 }
 button{
-    width: 115px;
+    width: 120px;
     height: 30px;
     background-color: rgb(255, 255, 255);
     box-shadow: 1px 1px 5px #ccc;
@@ -649,10 +649,25 @@ body{
         position: relative;
         top: -4px;
     }
-    .entries div .description .bull{
+    .entries div .description .bull,
+    .events li ul li .bull{
         color: #005bab;
     }
     .entries div .time {
         font-size: 12px;
         color: #545454;
     }
+
+.events {
+    margin: 16px;
+}
+.events li {
+    list-style: none;
+}
+.events li ul {
+    margin: 16px;
+}
+.events li ul li {
+    list-style: none;
+    display: inline;
+}
